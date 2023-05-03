@@ -28,7 +28,11 @@ app.get('/perfil/:id', (req, res) => {
 
   // Ruta para renderizar la plantilla Pug
   app.get('/miplantilla-pug', (req, res) => {
-    res.render('miplantilla', { mensaje: '¡Hola desde la plantilla Pug!' });
+    let imagePath = './images/ejemplo.png';
+    res.render('miplantilla', 
+    { mensaje: '¡Hola desde la plantilla Pug!',
+      imagen:imagePath});
+
   });
   
   // Ruta para renderizar la plantilla EJS
